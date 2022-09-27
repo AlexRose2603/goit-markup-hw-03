@@ -3,7 +3,7 @@ html {
 }
 
 :root {
-  --header-background-color: #f5f5f5;
+  --header-background-color: #ffffff;
   --hero-background-color: #2f303a;
   --second-background-color: #ffffff;
   --main-text-color: #757575;
@@ -18,6 +18,12 @@ body {
   background-color: var(--second-background-color);
   color: var(--main-head-color);
   margin: 0;
+}
+
+img {
+  display-block;
+  max-width: 100%;
+  height: auto;
 }
 
 h1,
@@ -44,23 +50,32 @@ p {
 }
 
 header {
-  padding-top: 24px;
-}
-.header-color {
+  padding: 24px 0;
   background-color: var(--header-background-color);
+  border-bottom: 1px solid #ECECEC;
 }
 
 .container {
-  width: 1230px;
+  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
 }
-
-.main-nav {
+.top-container {
   display: flex;
   align-items: center;
+}
+
+.navigation-list {
+  display: flex;
+  align-items: center;
+  padding-left: 0;
+}
+
+.main-nav,
+.nav-contacts {
+  display: flex;
 }
 
 ul {
@@ -77,12 +92,6 @@ ul {
   text-decoration: none; 
 }
 
-.navigation-list,
-.contacts-list {
-  padding-left: 0;
-  display: flex;
-  
-}
 .navigation-list .link:hover,
 .navigation-list .link:focus {
   color: var(--accent-color);
@@ -90,6 +99,8 @@ ul {
 
 .contacts-list {
   margin-left: auto;
+  padding-left: 0;
+  display: flex;
 }
 
 .contacts-list a {
@@ -124,7 +135,7 @@ margin-left: 50px;
 .hero {
   background-color: var(--hero-background-color);
   text-align: center;
-  margin-bottom: 94px;
+  padding: 200px 0;
 }
 
 .hero-title {
@@ -135,7 +146,10 @@ margin-left: 50px;
   text-transform: uppercase;
   color: var(--second-background-color);
   margin-bottom: 30px;
-  padding-top: 200px;
+  width: 696px;
+  margin-left: auto;
+  margin-right: auto;
+  
 }
 .button {
   font-weight: 700;
@@ -146,17 +160,20 @@ margin-left: 50px;
   background-color: var(--accent-color);
   display: inline-block;
   min-width: 216px;
-  margin-bottom: 200px;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 32px;
 }
 .visually-hidden {
-    position: fixed;
-    transform: scale(0);
+  position: fixed;
+  transform: scale(0);
 }
 
 .adv-list {
   display: flex; 
+  padding-bottom: 0px;
+  padding-top: 94px;
   justify-content: space-between;
-  margin-bottom: 94px;
 }
 
 .adv-list li {
@@ -180,15 +197,16 @@ margin-left: 50px;
 }
 
 .section {
-  margin-bottom: 94px;
+  padding-bottom: 94px;
 }
 
 .section-images {
-  display: flex; 
-  margin-bottom: 94px;
-  justify-content: space-between;
+  display: flex;
+  justify-content: space-between
 }
-
+.section-images .item {
+  display: flex;
+}
 .section-images .item:not(:last-child) {
 margin-right: 30px
 }
@@ -197,8 +215,8 @@ margin-right: 30px
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
-  margin-bottom: 50px;
   padding-top: 94px;
+  padding-bottom: 50px;
 }
 
 .workers {
@@ -210,8 +228,6 @@ margin-right: 30px
 }
 .worker-list {
   display: flex;
-  padding-bottom: 30px;
-  justify-content: center;
   justify-content: space-between;
 }
 
@@ -233,16 +249,12 @@ margin-right: 30px
   font-size: 16px;
   line-height: 1.18;
   color: var(--main-text-color);
+  padding-bottom: 30px;
 }
 
 footer {
   background-color: var(--hero-background-color);
   padding-top: 60px;
-}
-
-.logo,
-.footer-address {
-  padding-left: 215px;
 }
 
 .footer .logo-color {
@@ -257,8 +269,8 @@ footer {
   font-style: normal;
   line-height: 1.71;
   color: var(--second-background-color);
-  margin-top: 20px;
-  margin-bottom: 9px;
+  padding-top: 20px;
+  padding-bottom: 9px;
 }
 
 .footer-mail {
@@ -268,12 +280,10 @@ footer {
 .footer-list a {
   line-height: 1.71;
   color: rgba(255, 255, 255, 0.6);
-  padding-bottom: 9px;
 }
 
 .footer-list {
   padding-bottom: 60px;
-  padding-left: 215px;
 }
 
 /* Portfolio page */
@@ -303,25 +313,26 @@ footer {
 }
 .button-portfolio.button-current {
   background-color: var(--accent-color);
-  color:var(--second-background-color)
+  color: var(--second-background-color);
 }
 
 .button-current,
 .link.button-current {
-  background-color: var(--second-background-color)
-  color:var(--accent-color);
+  background-color: var(--second-background-color);
+  color: var(--accent-color);
 }
 .button-portfolio:hover,
 .button-portfolio:focus {
   background-color: var(--accent-color);
-  color:var(--second-background-color)
+  color: var(--second-background-color)
 }
 
 .projects {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 94px;
+  padding-bottom: 94px;
+  
 }
 .project {
   font-size: 18px;
@@ -345,3 +356,10 @@ footer {
   height: 294px;
   display: block;
 }
+.project-card {
+  border: 1px solid #EEEEEE;
+}
+.project-card:nth-child(-n+6) {
+  margin-bottom: 30px;
+}
+
