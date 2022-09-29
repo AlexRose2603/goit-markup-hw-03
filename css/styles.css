@@ -147,7 +147,6 @@ margin-left: 50px;
   margin-right: auto;
   background-image:linear-gradient(to right, rgba(47, 48, 58, 0.4),  rgba(47, 48, 58, 0.4)),
   url(../images/hero/hero-img.jpg);
-
 }
 
 .hero-title {
@@ -187,8 +186,9 @@ margin-left: 50px;
 }
 
 .advantages {
-  padding-bottom 0;
+  padding-bottom: 0;
 }
+
 .adv-list li {
   width: 270px; 
 }
@@ -268,7 +268,6 @@ margin-left: 50px;
 footer {
   background-color: var(--hero-background-color);
   padding: 60px 0;
-  
 }
 
 .footer .logo {
